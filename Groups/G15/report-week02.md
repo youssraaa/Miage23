@@ -159,9 +159,40 @@ result := dispatcher performOperation: addition with: 10 and: 5. --> 15
 
 result := dispatcher performOperation: multiplication with: 10 and: 5. --> 50
 
+```
 # Dahouane Youssra
 
-``` 
+Étant nouvelle dans le cours de C3P, j’ai commencé à me familiariser avec le langage orienté objet « Pharo ». J'ai consacré du temps à suivre les vidéos du MOOC et à lire les diapositives sur la syntaxe et les bases de Pharo avant d’aborder les exercices pratiques.
+
+## Introduction à Pharo et Dispatch des Messages : 
+
+En Pharo, tout est considéré comme un objet et les interactions se font par l'envoi de messages. Lorsqu'un message est envoyé, l'objet cherche à exécuter la méthode correspondante. Il s'agit du dispatch des messages.
+
+•	Ne pas demander : On indique à l'objet d'agir selon sa logique interne.
+•	 Laisser le récepteur décider : Le récepteur choisit la méthode à exécuter selon sa propre définition.
+
+Il existe plusieurs types de messages : 
+
+•	Message basique : Envoi d'un message simple à un objet sans arguments.
+
+Transcript show:  (5 + 3).
+
+On envoie le message show: à l'objet Transcript pour afficher le résultat de l'addition 5 + 3, qui est de 8.
+
+•	Message avec arguments : Envoi d'un message à un objet avec des arguments spécifiés.
+
+| a b |
+a := 7.
+b := 2.
+Transcript show : a – b.
+
+Le message - est envoyé à a avec b comme argument, et show: affiche le résultat qui est de 5.
+
+•	Cascades : Envoi de plusieurs messages à un même objet en une seule instruction, permettant d'enchaîner les appels.
+
+Transcript show : ‘Pharo’ asUppercase.
+
+Le code crée une chaîne de caractères "Pharo", la convertit en majuscules avec asUppercase, puis envoie le résultat "PHARO" au Transcript pour l’afficher. 
 
 
 
